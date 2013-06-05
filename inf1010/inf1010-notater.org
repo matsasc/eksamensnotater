@@ -1,5 +1,5 @@
-#+TITLE: INF1010 - Eksamensnotater
-#+AUTHOR: Eivind, Sjur, Annabelle & Martin
+#+TITLE: INF1010 - Eksamensnotaterx
+#+AUTHOR: Eivind, Sjur, Annabelle, Martin & Mats
 #+STARTUP: indent
 #+LATEX_HEADER: \documentclass[a4paper,norsk,10pt]{article}
 #+LATEX_HEADER: \usepackage{fullpage} %Utnytter større del av arket.
@@ -423,6 +423,12 @@ Klassisk eksempel på en rekursjonsmetode er dette fakultetseksempelet.
 Dersom fact() blir kalt med tallet 1, vil den returnere 1, ellers vil den returnere produktet av fact(n-1)*n. Denne metoden rekurserer inntil n = 1.
 Når en metode kaller seg selv, vil nye lokale variable og parametere lagres i stack, og koden utføres med disse nye variablene og parameterene fra starten aav. Den lagerr ikke kopi av metoden, kun argumenter/variabler.
 ** Hanois tårn
+Hanois tårn er et ganske mye brukt problem som kan løses ved rekursjon.
+Kort forklart så har du 3 pinner og en del skiver som er av forskjellige størrelser.
+#+INLUDE: "code/hanois.java" src java
+
+
+
 * Binære trær
 ** Sett inn i binærtre
 Under følger et eksempel på en sett-inn-metode for binære
@@ -894,6 +900,12 @@ til en metode.
 
 Bruk /repaint()/-metoden for å tegne vindu på nytt..
 * Shorthands
+** iterere over en hel collection
+#+BEGIN_SRC java
+for(Object o: Collection c){
+//Do something with the object
+}
+#+END_SRC
 ** If-shorthand
 
 #+BEGIN_SRC java
@@ -908,6 +920,9 @@ Burde isteden skrives slik:
 #+BEGIN_SRC java
 return (condition ? x : y);
 #+END_SRC
+
+
+
 * Prinsipper for større programmer
 -KISS
   - Moduler
